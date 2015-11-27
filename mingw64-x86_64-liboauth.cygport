@@ -1,0 +1,19 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-liboauth"
+VERSION=1.0.3
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="OAuth C library for Win64 toolchain"
+DESCRIPTION="liboauth is a collection of POSIX-c functions implementing the
+OAuth Core RFC 5849 standard. liboauth provides functions to escape and encode
+parameters according to OAuth specification and offers high-level
+functionality to sign requests or verify OAuth signatures as well as perform
+HTTP requests."
+HOMEPAGE="http://liboauth.sourceforge.net/"
+SRC_URI="mirror://sourceforge/liboauth/liboauth-${VERSION}.tar.gz"
+SRC_DIR="liboauth-${VERSION}"
+PATCH_URI="0.9.4-no-undefined.patch"
+
+MAKEOPTS+=" man_MANS= "
